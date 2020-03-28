@@ -135,8 +135,9 @@
             </div>
         </div>
         <div class="record-btns">
-            <button type="button" class="layui-btn layui-btn-warm">
-                <img src="../assets/images/stop.svg" alt="">
+            <button type="button" class="layui-btn layui-btn-warm playBtn">
+                <img class="play" style="display: inline-block;" src="../assets/images/play.svg" alt="">
+                <img class="stop" style="display: none;" src="../assets/images/stop.svg" alt="">
             </button>
             <button type="button" class="layui-btn">
                 <img src="../assets/images/stop (2).svg" alt="">
@@ -145,10 +146,10 @@
 
         <!-- 富文本 -->
         <div class="tabContainer">
-            <textarea id="layuiEdit" style="display: none;">
-                <div class="aa" style="padding:0 40px;position:relative;" class="layui-form-item medical">
-                    <p style="color:#707070;font-size:22px;text-align:center">合肥市口腔医院门诊病历</p>
-                    <div style="display: flex;height:50px;color:#b9b5b5;font-size:16px;flex-direction:column;justify-content: space-evenly;align-content: flex-start;">
+            <!-- <textarea id="layuiEdit" style="display: block;"> -->
+                <div class="layui-form-item medical">
+                    <p>合肥市口腔医院门诊病历</p>
+                    <div class="patientMedical">
                         <div>
                             <span class="name">姓名：车健</span>
                             <span style="position:absolute;left:400px" class="sex">性别：男</span>
@@ -162,46 +163,44 @@
                         </div>
                     </div>
                     <hr>
-                    <!-- 关键词 -->
                     <div class="kewWords" style="margin-top:10px">
-                        <ul style="font-weight:bold;list-style: none;font-size:16px;color:#000;height:230px;display:flex;flex-direction:column;justify-content: space-evenly;">
+                        <ul>
                             <li>
-                                主诉：
-                                <input style="width:80%;padding:4px;border:none;font-size:16px;font-weight: normal;" type="text" value="">
+                                主诉：<textarea style="display: inline-block;" id="zhusu"></textarea>
                             </li>
                             <li>
                                 现病史：
-                                <input style="width:80%;padding:4px;border:none;font-size:16px;font-weight: normal;" type="text" value="">
+                                <textarea style="display: inline-block;" id="xianbingshi"></textarea>
                             </li>
                             <li>
                                既往史：
-                                <input style="width:80%;padding:4px;border:none;font-size:16px;font-weight: normal;" type="text" value="">
+                               <textarea style="display: inline-block;" id="jiwangshi"></textarea>
                             </li>
                             <li>
                                 个人史：
-                                <input style="width:80%;padding:4px;border:none;font-size:16px;font-weight: normal;" type="text" value="">
+                                <textarea style="display: inline-block;" id="gerenshi"></textarea>
                             </li>
                             <li>
                                 体格检查：
-                                <input style="width:80%;padding:4px;border:none;font-size:16px;font-weight: normal;" type="text" value="">
+                                <textarea style="display: inline-block;" id="tige"></textarea>
                             </li>
                             <li>
                                 辅助检查：
-                                <input style="width:80%;padding:4px;border:none;font-size:16px;font-weight: normal;" type="text" value="">
+                                <textarea style="display: inline-block;" id="fuzhu"></textarea>
                             </li>
                             <li>
                                 诊断：
-                                <input style="width:80%;padding:4px;border:none;font-size:16px;font-weight: normal;" type="text" value="">
+                                <textarea style="display: inline-block;" id="zhenduan"></textarea>
                             </li>
                             <li>
                                 诊疗计划：
-                                <input style="width:80%;padding:4px;border:none;font-size:16px;font-weight: normal;" type="text" value="">
+                                <textarea style="display: inline-block;" id="zhenliao"></textarea>
                             </li>
                         </ul>
                         <br/>
                     </div>
                 </div>
-            </textarea>
+            <!-- </textarea> -->
         </div>
         <!-- 右侧 -->
         <div class="rightBar">
@@ -231,19 +230,58 @@
 <script>
     $('.patientInfo').find('span:eq(3)').css('border-right','none');
     layui.use(['layedit','element'], function(){
-        var layedit = layui.layedit;
-        var index = layedit.build('layuiEdit',{
+        var zhusuLayedit = layui.layedit;
+        var xianbingshiLayedit = layui.layedit;
+        var jiwangshiLayedit = layui.layedit;
+        var gerenshiLayedit = layui.layedit;
+        var tigeLayedit = layui.layedit;
+        var fuzhuLayedit = layui.layedit;
+        var zhenduanLayedit = layui.layedit;
+        var zhenliaoLayedit = layui.layedit;
+        zhusuLayedit.build('zhusu',{
             tool: ['strong','italic', 'underline','image','|'],
-            height: '100%',
+            height:'auto',
         });
-        layedit.set(
-            {
-                uploadImage:{
-                    url:'',
-                    type:''
-                }
-            })
-            // layedit.setContent(index,'<div style="padding:0 40px;position:relative;" class="layui-form-item medical"><p style="color:#707070;font-size:22px;text-align:center">合肥市口腔医院门诊病历</p><div style="display: flex;height:50px;color:#b9b5b5;font-size:16px;flex-direction:column;justify-content: space-evenly;align-content: flex-start;"><div><span class="name">姓名：车健</span><span style="position:absolute;left:400px" class="sex">性别：男</span><span style="position:absolute;left:600px" class="age">年龄：29</span><span style="position:absolute;left:800px" class="cardId">就诊卡号：00000001</span></div><div><span class="department">科室：牙体牙髓一科</span><span style="position:absolute;left:400px" class="departNum">科室电话：0551-62633085</span><span style="position:absolute;left:800px" class="date">就诊日期：2017-12-25</span></div></div><hr><div class="kewWords" style="margin-top:10px"><ul style="font-weight:bold;list-style: none;font-size:16px;color:#000;height:230px;display:flex;flex-direction:column;justify-content: space-evenly;"><li>                                主诉：<input style="width:80%;padding:4px;border:none;font-size:16px;font-weight: normal;" type="text" value=""></li><li>                                现病史：<input style="width:80%;padding:4px;border:none;font-size:16px;font-weight: normal;" type="text" value=""></li><li>                               既往史：<input style="width:80%;padding:4px;border:none;font-size:16px;font-weight: normal;" type="text" value=""></li><li>                                个人史：<input style="width:80%;padding:4px;border:none;font-size:16px;font-weight: normal;" type="text" value=""></li><li>                                体格检查：<input style="width:80%;padding:4px;border:none;font-size:16px;font-weight: normal;" type="text" value=""></li><li>                                辅助检查：<input style="width:80%;padding:4px;border:none;font-size:16px;font-weight: normal;" type="text" value=""></li><li>                                诊断：<input style="width:80%;padding:4px;border:none;font-size:16px;font-weight: normal;" type="text" value=""></li><li>                                诊疗计划：<input style="width:80%;padding:4px;border:none;font-size:16px;font-weight: normal;" type="text" value=""></li></ul><br/></div></div>');
-            console.log($('#LAY_layedit_1'))
+        xianbingshiLayedit.build('xianbingshi',{
+            tool: ['strong','italic', 'underline','image','|'],
+            height: 'auto',
+        });
+        jiwangshiLayedit.build('jiwangshi',{
+            tool: ['strong','italic', 'underline','image','|'],
+            height: 'auto',
+        });
+        gerenshiLayedit.build('gerenshi',{
+            tool: ['strong','italic', 'underline','image','|'],
+            height: 'auto',
+        });
+        tigeLayedit.build('tige',{
+            tool: ['strong','italic', 'underline','image','|'],
+            height: 'auto',
+        });
+        fuzhuLayedit.build('fuzhu',{
+            tool: ['strong','italic', 'underline','image','|'],
+            height: 'auto',
+        });
+        zhenduanLayedit.build('zhenduan',{
+            tool: ['strong','italic', 'underline','image','|'],
+            height: 'auto',
+        });
+        zhenliaoLayedit.build('zhenliao',{
+            tool: ['strong','italic', 'underline','image','|'],
+            height: 'auto',
+        });
+    });
+    // 录音按钮
+    $('.record-btns').find('.playBtn').click(function(){
+        var img1Status = $(this).find('.play').css('display');
+        var img2Status = $(this).find('.stop').css('display');
+        if(img1Status === 'inline-block'){  // 播放状态
+            $(this).find('.play').css('display','none');
+            $(this).find('.stop').css('display','inline-block');
+        }else{                        // 暂停状态
+            $(this).find('.play').css('display','inline-block');
+            $(this).find('.stop').css('display','none');
+
+        }
     })
 </script>
