@@ -6,11 +6,244 @@
     <title>erm静态演示模板</title>
     <link rel="stylesheet" href="../layui/css/layui.css">
     <link rel="stylesheet" href="../layui/layui.js">
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <script src="../layui/layui.all.js"></script>
+    <script src="../layui/layui.js"></script>
+    <script src="../assets/js/jquery/jquery.min.js"></script>
 </head>
 <body>
-    <div></div>
-</body>
-<script>
+    <div class="emr-container">
+           <!-- header -->
+        <div class="emr-header">
+            <!-- logo -->
+            <div class="emr-logo">
+                <span><img src="../assets/images/logo.svg" alt=""></span>
+                <span class="title">百度门诊语音电子病历系统演示版</span>
+            </div>
+            <div class="emr-right">
+                <div class="admin">
+                    <span>
+                        <img src="../assets/images/admin.svg" alt="">
+                        管理员
+                        <img src="../assets/images/down.svg" alt="">
+                    </span>
+                </div>
+                <div class="user">
+                    <span>
+                        测试1
+                        <img src="../assets/images/down.svg" alt="">
+                    </span>
+                </div>
+                <div class="email">
+                    <img src="../assets/images/email.svg" alt="">
+                    <img src="../assets/images/email.svg" alt="">
+                </div>
+                <div class="operate">
+                    <img src="../assets/images/setting.svg" alt="">
+                    <img src="../assets/images/small.svg" alt="">
+                    <img src="../assets/images/big.svg" alt="">
+                    <img src="../assets/images/close.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- menu -->
+        <div class="menu">
+            <button type="button" class="layui-btn layui-btn-primary layui-btn-radius">原始按钮</button>
+            <button type="button" class="layui-btn  layui-btn-radius">病历录入</button>
+            <button type="button" class="layui-btn layui-btn-primary layui-btn-radius">患者预约</button>
+            <button type="button" class="layui-btn layui-btn-primary layui-btn-radius">病历首页</button>
+            <button type="button" class="layui-btn layui-btn-primary layui-btn-radius">既往病历</button>
+            <button type="button" class="layui-btn layui-btn-primary layui-btn-radius">病历模板</button>
+            <button type="button" class="layui-btn layui-btn-primary layui-btn-radius">病历管理</button>
+            <button type="button" class="layui-btn layui-btn-primary layui-btn-radius">病历检索</button>
+            <button type="button" class="layui-btn layui-btn-primary layui-btn-radius">智能外呼</button>
+            <button type="button" class="layui-btn layui-btn-primary layui-btn-radius">病历质控</button>
+        </div>
 
-</script>
+        <div class="patientInfo">
+            <span>患者姓名：测试A</span>
+            <span>性别：男</span>
+            <span>年龄：不详</span>
+            <span>付费类型：自费</span>
+        </div>
+        <div class="toolBar">
+            <ul>
+                <li><a href="javascript:;">新增</a></li>
+                <li>
+                    <a href="javascript:;">保存
+                        <img src="../assets/images/down(1).svg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">打印
+                        <img src="../assets/images/down(1).svg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">优化
+                        <img src="../assets/images/down(1).svg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">模块
+                        <img src="../assets/images/down(1).svg" alt="">
+                    </a>
+                </li>
+                <li><a href="javascript:;">初诊
+                    <img src="../assets/images/down(1).svg" alt="">
+                </a>
+            </li>
+                <li><a href="javascript:;">处方</a></li>
+                <li><a href="javascript:;">检查</a></li>
+                <li><a href="javascript:;">牙周检查</a></li>
+                <li>
+                    <a href="javascript:;">辅助文书
+                        <img src="../assets/images/down(1).svg" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="record">
+            <div class="record-detail">
+                <span class="record-header"></span>
+                <ul>
+                    <li>无</li>
+                    <li>现病史</li>
+                    <li>现病史</li>
+                    <li>你好你好你好</li>
+                    <li>喂喂喂</li>
+                    <li>你好</li>
+                    <li>现病史</li>
+                    <li>一个月前开始出现左下牙咬物疼痛</li>
+                    <li>否认冷热痛自发痛等症状</li>
+                    <li>要求检查</li>
+                    <li>你好</li>
+                    <li>你好</li>
+                    <li>你好</li>
+                    <li>你好你好你好</li>
+                    <li>喂喂喂</li>
+                    <li>你好</li>
+                    <li>现病史</li>
+                    <li>一个月前开始出现左下牙咬物疼痛</li>
+                    <li>否认冷热痛自发痛等症状</li>
+                    <li>要求检查</li>
+                    <li>你好</li>
+                    <li>你好</li>
+                    <li>你好啊</li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="record-btns">
+            <button type="button" class="layui-btn layui-btn-warm">
+                <img src="../assets/images/stop.svg" alt="">
+            </button>
+            <button type="button" class="layui-btn">
+                <img src="../assets/images/stop (2).svg" alt="">
+            </button>
+        </div>
+
+        <!-- 富文本 -->
+        <div class="tabContainer">
+            <textarea id="layuiEdit" style="display: none;">
+                <div class="aa" style="padding:0 40px;position:relative;" class="layui-form-item medical">
+                    <p style="color:#707070;font-size:22px;text-align:center">合肥市口腔医院门诊病历</p>
+                    <div style="display: flex;height:50px;color:#b9b5b5;font-size:16px;flex-direction:column;justify-content: space-evenly;align-content: flex-start;">
+                        <div>
+                            <span class="name">姓名：车健</span>
+                            <span style="position:absolute;left:400px" class="sex">性别：男</span>
+                            <span style="position:absolute;left:600px" class="age">年龄：29</span>
+                            <span style="position:absolute;left:800px" class="cardId">就诊卡号：00000001</span>
+                        </div>
+                        <div>
+                            <span class="department">科室：牙体牙髓一科</span>
+                            <span style="position:absolute;left:400px" class="departNum">科室电话：0551-62633085</span>
+                            <span style="position:absolute;left:800px" class="date">就诊日期：2017-12-25</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- 关键词 -->
+                    <div class="kewWords" style="margin-top:10px">
+                        <ul style="font-weight:bold;list-style: none;font-size:16px;color:#000;height:230px;display:flex;flex-direction:column;justify-content: space-evenly;">
+                            <li>
+                                主诉：
+                                <input style="width:80%;padding:4px;border:none;font-size:16px;font-weight: normal;" type="text" value="">
+                            </li>
+                            <li>
+                                现病史：
+                                <input style="width:80%;padding:4px;border:none;font-size:16px;font-weight: normal;" type="text" value="">
+                            </li>
+                            <li>
+                               既往史：
+                                <input style="width:80%;padding:4px;border:none;font-size:16px;font-weight: normal;" type="text" value="">
+                            </li>
+                            <li>
+                                个人史：
+                                <input style="width:80%;padding:4px;border:none;font-size:16px;font-weight: normal;" type="text" value="">
+                            </li>
+                            <li>
+                                体格检查：
+                                <input style="width:80%;padding:4px;border:none;font-size:16px;font-weight: normal;" type="text" value="">
+                            </li>
+                            <li>
+                                辅助检查：
+                                <input style="width:80%;padding:4px;border:none;font-size:16px;font-weight: normal;" type="text" value="">
+                            </li>
+                            <li>
+                                诊断：
+                                <input style="width:80%;padding:4px;border:none;font-size:16px;font-weight: normal;" type="text" value="">
+                            </li>
+                            <li>
+                                诊疗计划：
+                                <input style="width:80%;padding:4px;border:none;font-size:16px;font-weight: normal;" type="text" value="">
+                            </li>
+                        </ul>
+                        <br/>
+                    </div>
+                </div>
+            </textarea>
+        </div>
+        <!-- 右侧 -->
+        <div class="rightBar">
+            <ul>
+                <li><img src="../assets/images/ait.svg" alt=""></li>
+                <li><img src="../assets/images/search_line.svg" alt=""></li>
+                <li>
+                    <span><img src="../assets/images/lyrics.svg" alt=""></span>
+                    <span><img src="../assets/images/notstarted.svg" alt=""></span>
+                    <span><img src="../assets/images/file.svg" alt=""></span>
+                </li>
+                <li><img src="../assets/images/question.svg" alt=""></li>
+            </ul>
+        </div>
+        <div class="footer">
+            <ul>
+                <li><span>既往病历</span></li>
+                <li><span>处方</span></li>
+                <li><span>检查报告</span></li>
+                <li><span>检验报告</span></li>
+                <li><span>影像报告</span></li>
+            </ul>
+        </div>
+    </div>
+</body>
 </html>
+<script>
+    $('.patientInfo').find('span:eq(3)').css('border-right','none');
+    layui.use(['layedit','element'], function(){
+        var layedit = layui.layedit;
+        var index = layedit.build('layuiEdit',{
+            tool: ['strong','italic', 'underline','image','|'],
+            height: '100%',
+        });
+        layedit.set(
+            {
+                uploadImage:{
+                    url:'',
+                    type:''
+                }
+            })
+            // layedit.setContent(index,'<div style="padding:0 40px;position:relative;" class="layui-form-item medical"><p style="color:#707070;font-size:22px;text-align:center">合肥市口腔医院门诊病历</p><div style="display: flex;height:50px;color:#b9b5b5;font-size:16px;flex-direction:column;justify-content: space-evenly;align-content: flex-start;"><div><span class="name">姓名：车健</span><span style="position:absolute;left:400px" class="sex">性别：男</span><span style="position:absolute;left:600px" class="age">年龄：29</span><span style="position:absolute;left:800px" class="cardId">就诊卡号：00000001</span></div><div><span class="department">科室：牙体牙髓一科</span><span style="position:absolute;left:400px" class="departNum">科室电话：0551-62633085</span><span style="position:absolute;left:800px" class="date">就诊日期：2017-12-25</span></div></div><hr><div class="kewWords" style="margin-top:10px"><ul style="font-weight:bold;list-style: none;font-size:16px;color:#000;height:230px;display:flex;flex-direction:column;justify-content: space-evenly;"><li>                                主诉：<input style="width:80%;padding:4px;border:none;font-size:16px;font-weight: normal;" type="text" value=""></li><li>                                现病史：<input style="width:80%;padding:4px;border:none;font-size:16px;font-weight: normal;" type="text" value=""></li><li>                               既往史：<input style="width:80%;padding:4px;border:none;font-size:16px;font-weight: normal;" type="text" value=""></li><li>                                个人史：<input style="width:80%;padding:4px;border:none;font-size:16px;font-weight: normal;" type="text" value=""></li><li>                                体格检查：<input style="width:80%;padding:4px;border:none;font-size:16px;font-weight: normal;" type="text" value=""></li><li>                                辅助检查：<input style="width:80%;padding:4px;border:none;font-size:16px;font-weight: normal;" type="text" value=""></li><li>                                诊断：<input style="width:80%;padding:4px;border:none;font-size:16px;font-weight: normal;" type="text" value=""></li><li>                                诊疗计划：<input style="width:80%;padding:4px;border:none;font-size:16px;font-weight: normal;" type="text" value=""></li></ul><br/></div></div>');
+            console.log($('#LAY_layedit_1'))
+    })
+</script>

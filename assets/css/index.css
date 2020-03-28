@@ -1,0 +1,260 @@
+.emr-container{
+    box-sizing: border-box;
+    position: absolute;
+    top:0;
+    bottom:0;
+    width: 100%;
+}
+.emr-header{
+    box-sizing: border-box;
+    width:100%;
+    height:30px;
+    background: rgb(53,65,80);
+    line-height: 30px;
+    padding:0 10px;
+    display: flex;
+    color:rgb(221,223,225);
+    font-size:12px;
+    justify-content: space-between;
+    align-items: center;
+}
+.emr-logo{
+    width:auto;
+    height:100%;
+}
+.emr-right{
+    padding-right:10px;
+    width:350px;
+    height:100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.emr-right div{
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.emr-right .email{
+    width:50px;
+}
+.emr-right .operate{
+    width:90px;
+}
+/* menu */
+.menu{
+    width:100%;
+    height: 32px;
+    box-sizing: border-box;
+    background:rgb(243,243,242);
+    display: flex;
+    padding-left:10px;
+    align-items: center;
+}
+.menu .layui-btn{
+    color:#000;
+    font-size:12px;
+    height:24px;
+    text-align: center;
+    padding:0;
+    width:60px;
+    line-height: 24px;
+    border:none;
+    background:rgb(243,243,242);
+}
+.menu .layui-btn:nth-child(2){
+    border:1px solid #C9C9C9;
+    background-color: #009688;
+    color: #fff;
+    line-height: 22px;
+}
+.patientInfo{
+    width:calc(100% - 34px);
+    height:32px;
+    line-height: 32px;
+    padding: 0 14px;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    border-bottom:1px solid #ccc;
+}
+
+.patientInfo span{
+    color:#000;
+    font-size:12px;
+    width:auto;
+    display:inline-block;
+    height:14px;
+    line-height: 14px;
+    padding:0 10px;
+    border-right:1px solid #ccc;
+}
+
+.toolBar{
+    height: 32px;
+    padding-left:10px;
+    line-height: 32px;
+    width: calc(100% - 34px);
+    box-sizing: border-box;
+}
+.toolBar ul{
+    border-bottom:1px solid #ccc;
+    height: 32px;
+    line-height: 32px;
+}
+.toolBar ul li{
+    float: left;
+}
+.toolBar ul a{
+    color:#000;
+    font-size:12px;
+    padding:0 12px;
+}
+.toolBar ul a img{
+    margin-left:8px;
+}
+/* 语音框 */
+.record{
+    position: absolute;
+    right:34px;
+    top:126px;
+    width:198px;
+    height:calc(100% - 182px);
+    overflow-y: scroll;
+}
+.record .record-detail{
+    width:100%;
+    height:auto;
+    height:calc(100% - 182px);
+}
+.record-detail ul{
+    position: relative;
+    display: flex;
+    margin-top:26px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+.record-detail .record-header{
+    width:198px;
+    right:34px;
+    height:30px;
+    background:rgb(25,203,132);
+    position: fixed;
+    z-index:1;
+    top:126px;
+}
+.record-btns{
+    height:30px;
+    position: fixed;
+    bottom:26px;
+    right:34px;
+    display:flex;
+    margin-left:0px;
+}
+.layui-btn+.layui-btn {
+    margin-left:0;
+}
+.record-btns > button{
+    width:99px;
+    opacity: 1;
+    border-radius: 0;
+    height:30px;
+    margin-left:0;
+    padding:0;
+    line-height: 30px;
+}
+.record-detail li{
+    margin:4px;
+    display: inline;
+    padding:2px 4px;
+    background: rgb(235,235,235);
+    color:rgb(129,125,143);
+    font-size:14px;
+    word-break:break-all;
+}
+/* 右侧工具栏 */
+.rightBar{
+    width:32px;
+    border:1px solid #ccc;
+    position:absolute;
+    top:62px;
+    right:0;
+    height:calc(100% - 88px);
+}
+.rightBar li{
+    cursor: pointer;
+}
+
+/* 富文本编辑器 */
+.tabContainer{
+    width:calc(100% - 232px);
+    position: absolute;
+    top:126px;
+    bottom:28px;
+}
+.tabContainer .layui-layedit{
+    height:100%;
+}
+.tabContainer .layui-layedit .layui-layedit-tool{
+    height:20px;
+    line-height: 20px;
+}
+.tabContainer .layui-layedit .layui-layedit-tool i{
+    height: 20px;
+    margin: 1px 5px;
+    font-size:12px;
+    line-height: 20px;
+}
+.tabContainer .layui-layedit .layui-layedit-tool .layedit-tool-mid{
+    line-height: 20px;
+    position: absolute;
+    height: 16px;
+    margin-top:2px;
+}
+.tabContainer .layui-layedit .layui-layedit-iframe{
+    position: absolute;
+    /* background: orange; */
+    top: 44px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+.tabContainer .layuiEdit .layui-form-item{
+    width:100%;
+    height:30px;
+    background:green;
+}
+.rightBar ul li{
+    width: 32px;
+    height: auto;
+    text-align: center;
+    border-bottom:1px solid #ccc;
+}
+.rightBar ul li img{
+    margin:10px 0;
+}
+.footer{
+    width:100%;
+    height: 26px;
+    position: absolute;
+    bottom:0;
+    background:rgb(243,243,242);
+}
+.footer ul{
+    width:100%;
+}
+.footer ul li{
+    float:left;
+}
+.footer ul li:nth-child(1){
+    background:#fff;
+}
+.footer ul li span{
+    cursor: pointer;
+    line-height: 26px;
+    font-size:12px;
+    border-right:1px solid #ccc;
+    padding:0 20px;
+}
