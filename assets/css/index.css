@@ -205,6 +205,12 @@
     font-size:22px;
     text-align:center;
 }
+.tabContainer .kewWords{
+    margin-top: 10px;
+}
+.tabContainer .kewWords textarea{
+    display: inline-block;
+}
 hr{
     background:#707070;
 }
